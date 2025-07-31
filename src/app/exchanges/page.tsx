@@ -1,34 +1,20 @@
-import { exchangesObj } from '@/data/exchanges';
-import Link from 'next/link';
+import { exchangesObj } from "@/data/exchanges";
+import { ListingCard } from "@/components/ListingCard";
 
-interface Exchange {
-  name: string;
-  description?: string;
-  affiliate_url?: string;
-  [key: string]: any;
-}
-
-const exchanges = Object.entries(exchangesObj).map(([slug, data]) => ({
-  slug,
-  ...data,
-})) as Array<{ slug: string } & Exchange>;
+type Exchange = (typeof exchangesObj)[string] & { slug: string };
 
 export default function ExchangesPage() {
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Crypto Exchanges</h1>
-      <ul className="space-y-2">
-        {exchanges.map((exchange) => (
-          <li key={exchange.slug}>
-            <Link
-              href={`/exchanges/${exchange.slug}`}
-              className="text-blue-600 underline"
-            >
-              {exchange.name}
-            </Link>
-          </li>
+    <main className="max-w-6xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
+        Top Crypto Exchanges
+      </h1>
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {Object.entries(exchangesObj).map(([slug, exchange]) => (
+          <ListingCard key={slug} {...exchange} />
         ))}
-      </ul>
+      </div>
     </main>
   );
 }

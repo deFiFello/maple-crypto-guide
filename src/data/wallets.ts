@@ -1,5 +1,5 @@
-// src/data/wallets.ts
 import walletsRaw from './wallets.json';
+import type { Metadata } from "next";
 
 export const walletsObj = walletsRaw as Record<
   string,
@@ -14,3 +14,7 @@ export const walletsObj = walletsRaw as Record<
     price_range?: string;
   }
 >;
+export const wallets = Object.entries(walletsObj).map(([slug, data]) => ({
+  slug,
+  ...data,
+}));

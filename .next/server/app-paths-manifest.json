@@ -1,9 +1,8 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/web3-products/page": "app/web3-products/page.js",
-  "/page": "app/page.js",
-  "/articles/page": "app/articles/page.js",
-  "/exchanges/page": "app/exchanges/page.js",
   "/wallets/page": "app/wallets/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/exchanges/page": "app/exchanges/page.js",
+  "/web3-products/page": "app/web3-products/page.js",
+  "/wallets/[slug]/page": "app/wallets/[slug]/page.js",
+  "/page": "app/page.js"
 }

@@ -1,15 +1,15 @@
-// src/data/exchanges.ts
+import exchangesRaw from './exchanges.json';
 
-import raw from './exchanges.json';
-
-export const exchangesObj = raw as Record<
+export const exchangesObj = exchangesRaw as Record<
   string,
   {
     name: string;
-    summary?: string;
     description: string;
+    summary?: string;
     website?: string;
+    affiliate_url?: string;
     rating?: number;
     tags?: string[];
+    type?: string;
   }
 >;

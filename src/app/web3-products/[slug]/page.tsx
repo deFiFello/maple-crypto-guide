@@ -1,6 +1,7 @@
-import { notFound } from 'next/navigation';
-import { web3ProductsObj } from '@/data/web3-products';
-import StructuredData from '@/components/StructuredData';
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { web3ProductsObj } from "@/data/web3-products";
+import StructuredData from "@/components/StructuredData";
 
 type Props = { params: { slug: string } };
 
@@ -15,8 +16,8 @@ export default function Web3ProductPage({ params }: Props) {
 
       <StructuredData
         data={{
-          '@context': 'https://schema.org',
-          '@type': 'Product',
+          "@context": "https://schema.org",
+          "@type": "Product",
           name: product.name,
           description: product.description,
           ...(product.logo && { image: product.logo }),
@@ -26,10 +27,9 @@ export default function Web3ProductPage({ params }: Props) {
   );
 }
 
-export function generateMetadata({ params }: Props) {
+export function generateMetadata({ params }: Props): Metadata {
   const product = web3ProductsObj[params.slug];
   if (!product) return {};
-
   return {
     title: `${product.name} | Maple Crypto`,
     description: product.description,

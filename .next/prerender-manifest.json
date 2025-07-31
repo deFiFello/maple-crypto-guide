@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "175427e3ed4babcfd80af4d3d534fce2",
-    "previewModeSigningKey": "000ebdee184f2264ede013d493d23698aa7c23ce73bd3b05345a75a4d3e6c355",
-    "previewModeEncryptionKey": "78b7c149dcd33ec9e2f43ddfcb753dbb78c42c77b1d5f44bf8fa0d9b0911e17e"
-  }
-}
+{"version":4,"routes":{"/wallets/zengo":{},"/wallets/tangem-wallet":{},"/wallets/metamask":{},"/wallets/safepal-s1":{},"/wallets/ledger-nano-x":{},"/wallets/trust-wallet":{},"/wallets/trezor-model-t":{},"/wallets/phantom":{},"/wallets/coinbase-wallet":{},"/wallets/exodus":{}},"dynamicRoutes":{"/wallets/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"ce3f3d19b062f82dcd6ffe4ee9cd152c","previewModeSigningKey":"c0aa74516ac3ef96e2a427d69fa66a2507bd9736d3ae3623b16f5fbf6eff6dd3","previewModeEncryptionKey":"30313d3586000108ca936678650743f27472bbb16dce23a311d64963ebd3eb58"}}
