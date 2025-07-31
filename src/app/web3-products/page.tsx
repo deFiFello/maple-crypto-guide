@@ -1,51 +1,34 @@
 // src/app/web3-products/page.tsx
+'use client';
 
-import { web3ProductsObj } from "@/data/web3-products";
-import { ListingCard } from "@/components/ListingCard";
-import type { Metadata } from "next";
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function generateMetadata(
-  { params }: Props
-): Promise<Metadata | {}> {
-  const product = web3ProductsObj[params.slug];
-  if (!product) return {};
-
-  return {
-    title: `${product.name} | Maple Crypto`,
-    description: product.description ?? "No description available.",
-  };
-}
-
-
-export async function generateStaticParams() {
-  return Object.keys(web3ProductsObj).map((slug) => ({ slug }));
-}
+import { useState } from 'react';
+import { web3ProductsObj } from '@/data/web3-products';
+import ListingCard from '@/components/ListingCard';
+import FilterBar from '@/components/FilterBar';
 
 export default function Web3ProductsPage() {
-  const products = Object.entries(web3ProductsObj).map(([slug, product]) => ({
-    slug,
-    ...product,
-    tags: Array.isArray(product.tags) ? product.tags : [],
-    description: product.description ?? "No description available.",
-  }));
+  const [filters, setFilters] = useState({ category: 'All', rating: 0 });
+
+  const filtered = Object.entries(web3ProductsObj).filter(([_, p]) => {
+    const matchCategory = filters.category === 'All' || p.category === filters.category;
+    const matchRating = !filters.rating || (p.rating && p.rating >= filters.rating);
+    return matchCategory && matchRating;
+  });
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
-        Explore Web3 Products
-      </h1>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((product, index) => (
+    <main className="max-w-6xl mx-auto px-4 py-6">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Explore Web3 Products</h1>
+      <FilterBar onFilterChange={setFilters} />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4">
+        {filtered.map(([slug, product]) => (
           <ListingCard
-            key={product.slug ?? `product-${index}`}
-            {...product}
+            key={slug}
+            slug={slug}
+            name={product.name}
+            description={product.description}
             tags={Array.isArray(product.tags) ? product.tags : []}
+            rating={product.rating}
+            affiliate_url={product.affiliate_url}
           />
         ))}
       </div>

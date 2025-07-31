@@ -1,19 +1,20 @@
 import walletsRaw from './wallets.json';
 import type { Metadata } from "next";
 
-export const walletsObj = walletsRaw as Record<
-  string,
-  {
-    name: string;
-    type: string;
-    description: string;
-    affiliate_url: string;
-    logo?: string;
-    rating?: number;
-    tags?: string[];
-    price_range?: string;
-  }
->;
+type WalletEntry = {
+  name: string;
+  type: string;
+  description: string;
+  affiliate_url: string;
+  logo?: string;
+  rating?: number;
+  tags?: string[];
+  price_range?: string;
+  category: string;
+};
+
+export const walletsObj = walletsRaw as Record<string, WalletEntry>;
+
 export const wallets = Object.entries(walletsObj).map(([slug, data]) => ({
   slug,
   ...data,

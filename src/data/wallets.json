@@ -1,152 +1,112 @@
 {
   "zengo": {
     "name": "ZenGo",
-    "type": "software (mobile)",
+    "type": "Software (mobile)",
     "description": "Keyless mobile wallet using MPC cryptography.",
     "logo": "",
     "affiliate_url": "https://zengo.com",
     "rating": 4.2,
-    "tags": [
-      "Mobile",
-      "MPC",
-      "No\u2011Seed",
-      "Beginner"
-    ],
-    "price_range": "Free / Subscription"
+    "tags": ["Mobile", "MPC", "No‑Seed", "Beginner"],
+    "price_range": "Free / Subscription",
+    "category": "Mobile"
   },
   "tangem-wallet": {
     "name": "Tangem Wallet",
-    "type": "hardware",
-    "description": "NFC card wallet with keyless tap\u2011to\u2011sign experience.",
-    "logo": "data:image/jpeg;base64,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",
+    "type": "Hardware",
+    "description": "NFC card wallet with tap‑to‑sign experience.",
+    "logo": "",
     "affiliate_url": "https://tangem.com",
     "rating": 4.4,
-    "tags": [
-      "Hardware",
-      "NFC",
-      "Card",
-      "Cold Storage"
-    ],
-    "price_range": "$54\u2011$69"
+    "tags": ["Hardware", "NFC", "Card", "Cold Storage"],
+    "price_range": "$54‑$69",
+    "category": "Cold Storage"
   },
   "metamask": {
     "name": "MetaMask",
-    "type": "software (browser/mobile)",
+    "type": "Software (browser/mobile)",
     "description": "Most popular Ethereum & EVM wallet for Web3.",
     "logo": "",
     "affiliate_url": "https://metamask.io",
     "rating": 4.7,
-    "tags": [
-      "Browser",
-      "Ethereum",
-      "DeFi",
-      "Open\u2011Source"
-    ],
-    "price_range": "Free"
+    "tags": ["Browser", "Ethereum", "DeFi", "Open‑Source"],
+    "price_range": "Free",
+    "category": "Mobile"
   },
   "safepal-s1": {
-    "name": "SafePal S1",
-    "type": "hardware",
-    "description": "Air\u2011gapped wallet backed by Binance, with self\u2011destruct feature.",
-    "logo": "data:image/png;base64,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",
+    "name": "SafePal S1",
+    "type": "Hardware",
+    "description": "Air‑gapped wallet backed by Binance.",
+    "logo": "",
     "affiliate_url": "https://www.safepal.com",
     "rating": 4.5,
-    "tags": [
-      "Hardware",
-      "Air\u2011Gapped",
-      "Budget",
-      "Secure Element"
-    ],
-    "price_range": "$49"
+    "tags": ["Hardware", "Secure Element", "Air‑Gapped", "Budget"],
+    "price_range": "$49",
+    "category": "Hardware"
   },
   "ledger-nano-x": {
     "name": "Ledger Nano X",
-    "type": "hardware",
-    "description": "Bluetooth\u2011enabled hardware wallet securing 5,500+ assets.",
-    "logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAZlBMVEUAAAD////T09MwMDC5ublcXFxgYGCoqKjo6Oj09PR5eXkJCQkEBARUVFSzs7P8/PxJSUm/v79PT08oKCjPz89ycnJXV1eZmZnW1tbHx8fg4OBubm6Pj48tLS0iIiJpaWkYGBh+fn6a3S+XAAACm0lEQVR4nO3cXXOiMBSA4diWWMuxEaXWdrfb7v//k+snw864nIDHYLrvc+NFaeAV1BmMcQ4AAAAAAAAAAAAAAAAAAAAAAACAc3KlbbWhDMe6UZKq8XVzF2uz8Z1DvW3qOnas91WisyiumvTw1DnYrM9Q95aXfKeH6GMKYfKiFIY+hakcCsP2+NXDMygM4bSf1IWHXWv0wqhRxjqHMZeWVthD8sK61t8H67vu99Iq4q20rt/HKXxMtj/349sXPlFojUJzFJqj0ByF5ig0R6E5Cs1RaI5CcxSaawr125fSPA6/1SmpC6V1DrXDFjndiJfBd+SlVZjknre0z6FaeNpGLihsX6VJ7+rHXKWti9OkMFGg+1ntTONehx/z5daivOSVWFQPW9WvwQNc1fP+6Q/l2MdxPdN94YzCjFGYPwrzR2H+KMwfhfmjMH8U5o/C/FGYPwrzR2H+KMwfhfmjMH8U5o/C/P1PhWdmKgyfg3JDjoX//Hv+icfC5eKs8hucxEPh+R9STmapfrw8TNyxHQvPC6uoeUTy18O1SVMW8zYh3YWziMLdXvYblZImstd0Q1EKY85hM/uvTH49i+j7lOOsr8sKEyvd4tN7/1nETNwT9/LcYfoVNftvtduh92Wy2kr5iDP3+3DGmedth0JzFJqj0ByF5ig0R6E5Cs1RaI5CcxSao9AcheYoNDdW4XKuWy9XnUMVa1/4ootf+/nrOIX60p57Jiu0jrS6Z1yjwdqXo63uuduxtu5o0M5hxCKvzRajrNCqHp7BKrvNXtJfpbpgvEJrqjUV3voclula0Em+YBNxCx+t8B+do60L5cOi/blRujLFpJXez2LXP/Qc7Aa/8zeeaXGDhQAAAAAAAAAAAAAAAAAAAAAAAEByfwDQLi9npKG4pAAAAABJRU5ErkJggg==",
-    "affiliate_url": "https://www.ledger.com",
+    "type": "Hardware",
+    "description": "Secure Bluetooth hardware wallet for 5,500+ assets.",
+    "logo": "",
+    "affiliate_url": "https://ledger.com",
     "rating": 4.8,
-    "tags": [
-      "Hardware",
-      "Cold Storage",
-      "Secure Element",
-      "Bluetooth"
-    ],
-    "price_range": "$149"
+    "tags": ["Hardware", "Bluetooth", "Secure"],
+    "price_range": "$149",
+    "category": "Hardware"
   },
   "trust-wallet": {
     "name": "Trust Wallet",
-    "type": "software (mobile)",
-    "description": "Binance\u2011owned mobile wallet with 10M+ assets and dApp browser.",
+    "type": "Software (mobile)",
+    "description": "Binance‑owned mobile wallet with DeFi and NFT support.",
     "logo": "",
     "affiliate_url": "https://trustwallet.com",
     "rating": 4.3,
-    "tags": [
-      "Mobile",
-      "DeFi",
-      "NFT",
-      "Multicurrency"
-    ],
-    "price_range": "Free"
-  },
-  "trezor-model-t": {
-    "name": "Trezor Model T",
-    "type": "hardware",
-    "description": "Open\u2011source touchscreen hardware wallet with Shamir backup.",
-    "logo": "data:image/png;base64,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",
-    "affiliate_url": "https://trezor.io",
-    "rating": 4.6,
-    "tags": [
-      "Hardware",
-      "Open\u2011Source",
-      "Touchscreen",
-      "Cold Storage"
-    ],
-    "price_range": "$219"
+    "tags": ["Mobile", "DeFi", "NFT", "Multicurrency"],
+    "price_range": "Free",
+    "category": "Mobile"
   },
   "phantom": {
     "name": "Phantom",
-    "type": "software (browser/mobile)",
-    "description": "Slick Solana wallet now multi\u2011chain with NFT focus.",
+    "type": "Software (browser/mobile)",
+    "description": "Slick Solana wallet, now multi‑chain with NFT focus.",
     "logo": "",
     "affiliate_url": "https://phantom.app",
     "rating": 4.4,
-    "tags": [
-      "Solana",
-      "NFT",
-      "DeFi",
-      "Multi\u2011Chain"
-    ],
-    "price_range": "Free"
+    "tags": ["Solana", "NFT", "DeFi", "Multi‑Chain"],
+    "price_range": "Free",
+    "category": "Mobile"
   },
   "coinbase-wallet": {
     "name": "Coinbase Wallet",
-    "type": "software (mobile/extension)",
-    "description": "Self\u2011custody wallet from Coinbase with multi\u2011chain support.",
+    "type": "Software (mobile/extension)",
+    "description": "Self‑custody wallet from Coinbase with multi‑chain support.",
     "logo": "",
-    "affiliate_url": "https://www.coinbase.com/wallet",
+    "affiliate_url": "https://coinbase.com/wallet",
     "rating": 4.6,
-    "tags": [
-      "Mobile",
-      "DeFi",
-      "Multi\u2011Chain",
-      "User\u2011Friendly"
-    ],
-    "price_range": "Free"
+    "tags": ["Mobile", "DeFi", "Multi‑Chain", "User‑Friendly"],
+    "price_range": "Free",
+    "category": "Mobile"
   },
   "exodus": {
     "name": "Exodus",
-    "type": "software (desktop/mobile)",
-    "description": "Sleek multi\u2011currency wallet with built\u2011in exchange.",
-    "logo": "data:image/jpeg;base64,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",
+    "type": "Software (desktop/mobile)",
+    "description": "Multi‑currency wallet with built‑in desktop exchange.",
+    "logo": "",
     "affiliate_url": "https://www.exodus.com",
     "rating": 4.0,
-    "tags": [
-      "Desktop",
-      "Mobile",
-      "Exchange",
-      "User\u2011Friendly"
-    ],
-    "price_range": "Free"
+    "tags": ["Desktop", "Exchange", "Multi‑Chain"],
+    "price_range": "Free",
+    "category": "Software"
+  },
+  "rabby": {
+    "name": "Rabby",
+    "type": "Software (browser)",
+    "description": "Web3‑focused browser extension with multi‑chain support.",
+    "logo": "",
+    "affiliate_url": "https://rabby.io",
+    "rating": 4.0,
+    "tags": ["Extension", "Multi‑Chain", "Web3"],
+    "price_range": "Free",
+    "category": "Software"
   }
 }
