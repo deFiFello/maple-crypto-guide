@@ -1,40 +1,33 @@
-import { notFound } from 'next/navigation';
-import { articlesObj } from '@/data/articles';
-import StructuredData from '@/components/StructuredData';
+import { Metadata } from 'next';
+import { getArticleBySlug } from '../../../lib/articles';
 
-type Props = { params: { slug: string } };
-
-export default function ArticlePage({ params }: Props) {
-  const article = articlesObj[params.slug];
-  if (!article) return notFound();
-
-  return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">{article.title}</h1>
-      <p className="mb-2">{article.body}</p>
-
-      <StructuredData
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: article.title,
-          articleBody: article.body,
-        }}
-      />
-    </main>
-  );
+interface Props {
+  params: { slug: string };
 }
 
-export function generateMetadata({ params }: Props) {
-  const article = articlesObj[params.slug];
-  if (!article) return {};
+// ✅ SEO Metadata — dynamic
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const article = await getArticleBySlug(params.slug);
 
   return {
-    title: `${article.title} | Maple Crypto`,
-    description: article.summary ?? article.body,
+    title: article?.title ?? 'Web3 Article',
+    description: article?.excerpt ?? '',
   };
 }
 
-export async function generateStaticParams() {
-  return Object.keys(articlesObj).map((slug) => ({ slug }));
+// ✅ Page rendering
+export default async function ArticlePage({ params }: Props) {
+  const article = await getArticleBySlug(params.slug);
+
+  if (!article) {
+    return <p className="text-red-500">Article not found.</p>;
+  }
+
+  return (
+    <main className="prose max-w-3xl mx-auto py-12">
+      <h1 className="text-2xl font-bold mb-4">{article.title}</h1>
+      <p className="mb-2 text-gray-600">{article.excerpt}</p>
+      <article dangerouslySetInnerHTML={{ __html: article.body }} />
+    </main>
+  );
 }

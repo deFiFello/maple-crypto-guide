@@ -1,4 +1,4 @@
-import walletsRaw from './wallets.json';
+import walletsRaw from '../data/wallets.json';
 import type { Metadata } from "next";
 
 type WalletEntry = {

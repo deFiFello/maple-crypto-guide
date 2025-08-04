@@ -1,8 +1,8 @@
-// File: /Users/chrishull/maple-crypto-guide/src/app/exchanges/page.tsx
-import * as entry from '../../../../src/app/exchanges/page.js'
+// File: /Users/chrishull/maple-crypto-guide/src/app/articles/page.tsx
+import * as entry from '../../../../src/app/articles/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/exchanges/page.js')
+type TEntry = typeof import('../../../../src/app/articles/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }

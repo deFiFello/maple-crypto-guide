@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { walletsObj } from "@/data/wallets";
+import { walletsObj } from "@/lib/wallets";
 import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next"; // ✅ Add this
 

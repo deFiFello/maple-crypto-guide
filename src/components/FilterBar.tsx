@@ -1,60 +1,59 @@
 // src/components/FilterBar.tsx
 'use client';
-
-import { useState } from 'react';
-
-const categories = ['All', 'Health', 'Finance', 'Tools'];
-const ratings = [5, 4, 3];
+import React, { useState, useEffect } from 'react';
 
 interface FilterBarProps {
   onFilterChange: (filters: { category: string; rating: number }) => void;
+  data: { category: string }[];
+  labelMap: Record<string, string>;
 }
 
-export default function FilterBar({ onFilterChange }: FilterBarProps) {
+const FilterBar = ({ onFilterChange, data, labelMap }: FilterBarProps) => {
+  const categories = Array.from(
+    new Set(data.map((item) => item.category))
+  );
   const [category, setCategory] = useState('All');
   const [rating, setRating] = useState(0);
-
+  
+  useEffect(() => {
+    onFilterChange({ category, rating });
+  }, [category, rating]);
+  
   return (
-    <div className="sticky top-0 z-10 bg-white dark:bg-zinc-900 shadow-sm border-b border-zinc-200 dark:border-zinc-700 py-4 px-4 mb-6">
-      <div className="flex flex-wrap items-center gap-4">
-        {/* Category Filter */}
-        <div>
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">Category:</label>
-          <select
-            value={category}
-            onChange={(e) => {
-              setCategory(e.target.value);
-              onFilterChange({ category: e.target.value, rating });
-            }}
-            className="text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-2 py-1"
-          >
-            {categories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
+    <div className="flex items-center gap-4 flex-wrap mb-4">
+      <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        Category:
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="ml-2 px-2 py-1 rounded border dark:bg-zinc-800"
+        >
+          <option value="All">All</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {labelMap?.[cat] ?? cat}
+            </option>
+          ))}
+        </select>
+      </label>
 
-        {/* Rating Filter */}
-        <div>
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">Min Rating:</label>
-          <select
-            value={rating}
-            onChange={(e) => {
-              const newRating = Number(e.target.value);
-              setRating(newRating);
-              onFilterChange({ category, rating: newRating });
-            }}
-            className="text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 px-2 py-1"
-          >
-            <option value={0}>All</option>
-            {ratings.map((r) => (
-              <option key={r} value={r}>{`${r}★ & up`}</option>
-            ))}
-          </select>
-        </div>
-      </div>
+      <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        Min Rating:
+        <select
+          value={rating}
+          onChange={(e) => setRating(Number(e.target.value))}
+          className="ml-2 px-2 py-1 rounded border dark:bg-zinc-800"
+        >
+          <option value={0}>All</option>
+          {[1, 2, 3, 4, 5].map((r) => (
+            <option key={r} value={r}>
+              {r}★+
+            </option>
+          ))}
+        </select>
+      </label>
     </div>
   );
-}
+};
+
+export default FilterBar;

@@ -19,7 +19,7 @@ export interface Web3Product {
 }
 
 // ✅ Import the raw JSON object
-import rawWeb3Products from './web3-products.json';
+import rawWeb3Products from '../data/web3-products.json';
 
 // ✅ Convert the raw object into a typed Record<string, Web3Product>
 export const web3ProductsObj = rawWeb3Products as Record<string, any>;

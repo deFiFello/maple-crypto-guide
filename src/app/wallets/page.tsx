@@ -1,9 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { wallets } from '@/data/wallets'; // ✅ updated
+import { wallets } from '@/lib/wallets';
 import ListingCard from '@/components/ListingCard';
 import FilterBar from '@/components/FilterBar';
+
+const labelMap = {
+  All: 'All',
+  Mobile: 'Mobile',
+  Hardware: 'Hardware',
+  Software: 'Software',
+  'cold storage': 'Cold Storage',
+};
 
 export default function WalletsPage() {
   const [filters, setFilters] = useState({ category: 'All', rating: 0 });
@@ -17,7 +25,11 @@ export default function WalletsPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Explore Wallets</h1>
-      <FilterBar onFilterChange={setFilters} />
+      <FilterBar
+        onFilterChange={setFilters}
+        data={wallets}
+        labelMap={labelMap}
+      />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4">
         {filtered.map((wallet) => (
           <ListingCard

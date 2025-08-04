@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { web3ProductsObj } from "@/data/web3-products";
+import { web3ProductsObj } from "@/lib/web3-products";
 import StructuredData from "@/components/StructuredData";
 
 type Props = { params: { slug: string } };
