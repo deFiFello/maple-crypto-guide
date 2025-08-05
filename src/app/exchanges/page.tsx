@@ -1,5 +1,5 @@
 // src/app/exchanges/page.tsx
-import { exchangesObj } from '@/data/exchanges';
+import { exchangesObj } from "@/lib/exchanges";
 import ListingCard from '@/components/ListingCard';
 
 export default function ExchangePage() {

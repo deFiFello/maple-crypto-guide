@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "63a44d9df7118108f2aae15aa056c346",
-    "previewModeSigningKey": "2cda9660d3f844cbbc3fe14bafcc052ff4ed840850f9c881001131d6f60552f7",
-    "previewModeEncryptionKey": "c254c950f9038cde6b4381e19261704477ea8886867f869e5b5a14ad542d9d7a"
-  }
-}
+{"version":4,"routes":{"/web3-products/cudis-smart-ring-002":{},"/web3-products/curering-by-axondao":{},"/web3-products/watchx-fusion-smartwatch":{},"/web3-products/deeper-connect-pico":{},"/web3-products/weatherxm-station-ws2000":{},"/web3-products/solana-saga-phone":{},"/web3-products/hivemapper-dashcam":{},"/web3-products/anyone-router":{},"/web3-products/suiplay0x1-handheld":{},"/web3-products/pebble-tracker-(iotex)":{},"/web3-products/dimo-autopi-vehicle-miner":{}},"dynamicRoutes":{"/web3-products/[slug]":{"fallback":null}},"notFoundRoutes":[],"preview":{"previewModeId":"63a44d9df7118108f2aae15aa056c346","previewModeSigningKey":"2cda9660d3f844cbbc3fe14bafcc052ff4ed840850f9c881001131d6f60552f7","previewModeEncryptionKey":"c254c950f9038cde6b4381e19261704477ea8886867f869e5b5a14ad542d9d7a"}}

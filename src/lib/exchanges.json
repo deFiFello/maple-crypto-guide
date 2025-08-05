@@ -1,0 +1,182 @@
+{
+  "ndax": {
+    "name": "NDAX",
+    "country": "Canada",
+    "description": "Low\u2011fee Calgary exchange with staking and OTC desk.",
+    "logo": "",
+    "affiliate_url": "https://ndax.io",
+    "rating": 4.2,
+    "tags": [
+      "Canadian",
+      "Low\u2011fees",
+      "OTC"
+    ],
+    "price_range": "0.2% flat; $4.99 CAD withdrawal",
+    "is_regulated": true
+  },
+  "newton": {
+    "name": "Newton",
+    "country": "Canada",
+    "description": "Commission\u2011free broker with 70+ coins.",
+    "logo": "",
+    "affiliate_url": "https://newton.co",
+    "rating": 4.1,
+    "tags": [
+      "Canadian",
+      "No\u2011commission",
+      "Many\u2011coins"
+    ],
+    "price_range": "No fee; 1\u20112% spread",
+    "is_regulated": true
+  },
+  "wealthsimple-crypto": {
+    "name": "Wealthsimple Crypto",
+    "country": "Canada",
+    "description": "Crypto inside the Wealthsimple Trade app.",
+    "logo": "",
+    "affiliate_url": "https://wealthsimple.com",
+    "rating": 3.6,
+    "tags": [
+      "Canadian",
+      "Beginner",
+      "Integrated"
+    ],
+    "price_range": "1.5\u20112% spread",
+    "is_regulated": true
+  },
+  "bitbuy": {
+    "name": "Bitbuy",
+    "country": "Canada",
+    "description": "Toronto-based exchange built for Canadian investors.",
+    "logo": "",
+    "affiliate_url": "https://bitbuy.ca",
+    "rating": 4.3,
+    "tags": [
+      "Canadian",
+      "High\u2011security",
+      "Beginner"
+    ],
+    "price_range": "0.1% maker / 0.2% taker (Pro); ~1.5% spread on Express",
+    "is_regulated": true
+  },
+  "shakepay": {
+    "name": "Shakepay",
+    "country": "Canada",
+    "description": "Instant Bitcoin & Ethereum purchases with no fees.",
+    "logo": "",
+    "affiliate_url": "https://shakepay.com",
+    "rating": 4.0,
+    "tags": [
+      "Canadian",
+      "No\u2011fees",
+      "Beginner"
+    ],
+    "price_range": "No fee; spread on price",
+    "is_regulated": true
+  },
+  "coinbase": {
+    "name": "Coinbase",
+    "country": "USA",
+    "description": "Largest US exchange, ideal for beginners.",
+    "logo": "",
+    "affiliate_url": "https://www.coinbase.com",
+    "rating": 4.3,
+    "tags": [
+      "Global",
+      "Beginner",
+      "Secure"
+    ],
+    "price_range": "0.0%\u20110.6% maker/taker",
+    "is_regulated": true
+  },
+  "netcoins": {
+    "name": "Netcoins",
+    "country": "Canada",
+    "description": "Flat\u2011fee Vancouver exchange owned by a public company.",
+    "logo": "",
+    "affiliate_url": "https://netcoins.com",
+    "rating": 3.8,
+    "tags": [
+      "Canadian",
+      "Flat\u2011fee",
+      "Easy"
+    ],
+    "price_range": "0.5% per trade",
+    "is_regulated": true
+  },
+  "cryptocom": {
+    "name": "Crypto.com",
+    "country": "Singapore",
+    "description": "Global platform with 300+ coins and crypto Visa card.",
+    "logo": "",
+    "affiliate_url": "https://crypto.com",
+    "rating": 4.2,
+    "tags": [
+      "Global",
+      "Many\u2011coins",
+      "Card"
+    ],
+    "price_range": "0.4% maker/taker (tiered)",
+    "is_regulated": true
+  },
+  "virgocx": {
+    "name": "VirgoCX",
+    "country": "Canada",
+    "description": "90+ coins plus OTC and NFT trading.",
+    "logo": "",
+    "affiliate_url": "https://virgocx.ca",
+    "rating": 4.1,
+    "tags": [
+      "Canadian",
+      "Many\u2011coins",
+      "OTC"
+    ],
+    "price_range": "0.2%\u20130.7% maker/taker tiered",
+    "is_regulated": true
+  },
+  "coinsquare": {
+    "name": "Coinsquare",
+    "country": "Canada",
+    "description": "One of Canada\u2019s longest\u2011running crypto platforms.",
+    "logo": "",
+    "affiliate_url": "https://coinsquare.com",
+    "rating": 4.0,
+    "tags": [
+      "Canadian",
+      "Regulated",
+      "Secure"
+    ],
+    "price_range": "0.5% maker / taker; spread on QuickTrade",
+    "is_regulated": true
+  },
+  "binance": {
+    "name": "Binance",
+    "country": "Cayman Islands",
+    "description": "World\u2019s largest exchange by volume, 350+ coins.",
+    "logo": "",
+    "affiliate_url": "https://www.binance.com",
+    "rating": 4.0,
+    "tags": [
+      "Global",
+      "Many\u2011coins",
+      "Low\u2011fees"
+    ],
+    "price_range": "0.1% maker/taker",
+    "is_regulated": false
+  },
+  "kraken": {
+    "name": "Kraken",
+    "country": "USA",
+    "description": "Veteran US exchange with low fees and 350+ coins.",
+    "logo": "",
+    "affiliate_url": "https://www.kraken.com",
+    "rating": 4.5,
+    "tags": [
+      "Global",
+      "Low\u2011fees",
+      "Advanced"
+    ],
+    "price_range": "0%\u20110.4% tiered maker/taker",
+    "is_regulated": true
+  }
+}

@@ -1,15 +1,4 @@
 import exchangesRaw from './exchanges.json';
+import { Exchange } from '../types/exchange'; // ✅ adjust path as needed
 
-export const exchangesObj = exchangesRaw as Record<
-  string,
-  {
-    name: string;
-    description: string;
-    summary?: string;
-    website?: string;
-    affiliate_url?: string;
-    rating?: number;
-    tags?: string[];
-    type?: string;
-  }
->;
+export const exchangesObj = exchangesRaw as Record<string, Exchange>;

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { exchangesObj } from "@/data/exchanges";
+import { exchangesObj } from "@/lib/exchanges";
 import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next"; // ✅ Add this
 
